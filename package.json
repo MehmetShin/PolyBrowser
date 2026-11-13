@@ -1,0 +1,31 @@
+{
+  "name": "poly-tarayici",
+  "productName": "Poly",
+  "version": "1.0.0",
+  "description": "Poly - Akıcı, RAM dostu modern Chromium tabanlı web tarayıcısı",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "node scripts/launch.js",
+    "build": "electron-packager . Poly --platform=win32 --arch=x64 --icon=src/assets/icon.ico --out=dist --overwrite --ignore=^/dist",
+    "build:installer": "node scripts/build-secure.js"
+  },
+  "keywords": [
+    "browser",
+    "electron",
+    "chromium",
+    "ram-friendly",
+    "poly"
+  ],
+  "author": "Poly",
+  "license": "MIT",
+  "polyUpdater": {
+    "owner": "MehmetShin",
+    "repo": "PolyBrowser"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^35.0.0",
+    "innosetup-compiler": "^6.3.1",
+    "javascript-obfuscator": "^5.10.1"
+  }
+}

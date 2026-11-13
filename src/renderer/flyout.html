@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poly Flyout</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      background: #151824 !important;
+      color: #eef0f7;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    }
+    :root[data-theme='light'] html,
+    :root[data-theme='light'] body {
+      background: #ffffff !important;
+      color: #0f172a !important;
+    }
+    .flyout-container {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+    }
+    .drawer {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      max-height: 100% !important;
+      background: #151824 !important;
+      border: none !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      animation: slidePanelIn 0.12s ease-out;
+    }
+    :root[data-theme='light'] .drawer {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      border-right: 1px solid rgba(15, 23, 42, 0.12) !important;
+      box-shadow: none !important;
+    }
+    .drawer-header {
+      height: 46px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-shrink: 0;
+    }
+    :root[data-theme='light'] .drawer-header {
+      border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+    }
+    .drawer-header h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #eef0f7;
+    }
+    :root[data-theme='light'] .drawer-header h2,
+    :root[data-theme='light'] #drawer-title {
+      color: #0f172a !important;
+    }
+    .drawer-close {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: #9299b0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: background 0.1s ease, color 0.1s ease;
+    }
+    .drawer-close:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+    :root[data-theme='light'] .drawer-close {
+      color: #64748b !important;
+    }
+    :root[data-theme='light'] .drawer-close:hover {
+      background: #e9edf5 !important;
+      color: #0f172a !important;
+    }
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @keyframes slidePanelIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyout-container">
+    <section class="drawer" id="drawer">
+      <div class="drawer-header">
+        <h2 id="drawer-title">Panel</h2>
+        <button class="drawer-close" id="drawer-close" title="Kapat">✕</button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </section>
+  </div>
+  <script src="flyout.js"></script>
+</body>
+</html>
+
