@@ -112,7 +112,7 @@ Poly Browser, kullanıcı verilerini dış dünyaya ve zararlı sitelere karşı
 - **Electron Binary Sertleştirme (Fuses):** `RunAsNode=false`, `CookieEncryption=true`, `AsarIntegrity=true` ve `OnlyLoadFromAsar=true` aktif olarak derlenir.
 - **Mark-of-the-Web ve SHA-256 Bütünlük:** İndirilen dosyalar Windows Güvenlik Bölgesi ile işaretlenir; tarayıcı güncellemeleri SHA-256 doğrulamasından geçer.
 
-### v1.3.4 VirusTotal ve SHA-256 Doğrulaması
+### VirusTotal ve SHA-256 Doğrulaması
 
 | Dosya | SHA-256 Özeti | VirusTotal Sonucu |
 | :--- | :--- | :--- |
