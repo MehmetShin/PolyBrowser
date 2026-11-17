@@ -11,7 +11,7 @@
 
 <br />
 
-[**Hemen İndir (v1.6.3)**](https://github.com/MehmetShin/PolyBrowser/releases/tag/v1.3.4) •
+[**Hemen İndir (v1.6.6)**](https://github.com/MehmetShin/PolyBrowser/releases/tag/v1.3.4) •
 [**Özellikler**](#öne-çıkan-özellikler) •
 [**Güvenlik ve Gizlilik**](#güvenlik-mimarisi-ve-gizlilik) •
 [**Klavye Kısayolları**](#klavye-kısayolları) •
